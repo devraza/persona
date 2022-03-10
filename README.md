@@ -6,16 +6,21 @@ Persona is a modularized Discord self-bot, aimed at those who need fast and cust
 
 ## Installing
 
-To build the bot, you will need [Go](https://go.dev).
+To build the bot, you will need [install Go](https://go.dev/dl/).
 
 In order to properly use the bot, you're gonna have to include the sub-packages (otherwise all you'll have is the core package, which doesn't really do anything).
-We add modularization using [go tags](https://wawand.co/blog/posts/using-build-tags/). A list of available tags can be found in TAGS.md.
+We add modularization using [go tags](https://wawand.co/blog/posts/using-build-tags/). A list of available tags can be found in [TAGS.md](TAGS.md).
 
 To build the bot, you need to add the dependencies first:
 
 ```
 $ cd src/
 $ go get ./...
+```
+You also need to specify your [user token](https://pcstrike.com/how-to-get-discord-token/) in a file called `.env`. The file should look like similar to this:
+
+```
+TOKEN=a0EwYFeNeAQzFoYhZX8pmHB26aCZ4ZcV3eMrbw88yVchiGtTjkTZO5H0I3qKC6FlyhwXOidGTIf0zfDmgk8HMA==
 ```
 
 Now, you can install the bot with a specified number of tags:
