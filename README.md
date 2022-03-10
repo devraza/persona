@@ -1,11 +1,7 @@
-TODO: Add Logo
-
-# Persona
-
+## Persona
 Persona is a modularized Discord self-bot, aimed at those who need fast and customizable services in any Discord context.
 
-## Installing
-
+### Installing
 To build the bot, you will need [install Go](https://go.dev/dl/).
 
 In order to properly use the bot, you're gonna have to include the sub-packages (otherwise all you'll have is the core package, which doesn't really do anything).
@@ -30,13 +26,13 @@ $ go build -tags "<list of tags seperated by spaces>"
 $ go install .
 ```
 
-To run it, simply type:
+To run it, type:
 
 ```
 persona
 ```
 
-## Usage
+### Usage
 
 Usage depends on the tags included. To run commands, you typically use the prefix, followed by the tagname, followed by the actual command.
 
@@ -51,10 +47,9 @@ For more information, see:
 ~help
 ```
 
-## FAQ
+### FAQ
+> Q: Why is it called persona?  
+> A: It's a personal bot, and [midnadimple](https://github.com/midnadimple) likes the Persona series.
 
-Q: Why is it called persona?  
-A: It's a personal bot, and [midnadimple](https://github.com/midnadimple) likes the Persona series.
-
-Q: Why is it written in [the Go programming language](https://go.dev)?  
-A: Haha, speed go brrr.
+> Q: Why is it written in [the Go programming language](https://go.dev)?  
+> A: Speed is considerable important when it comes to AI.
