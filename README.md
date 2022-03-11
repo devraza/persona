@@ -1,10 +1,10 @@
 ## Persona
-Persona is a modularized Discord self-bot, aimed at those who need fast and customizable services in any Discord context.
+Persona is a modularized Discord userbot, created for those who need fast and customizable services in any Discord context.
 
 ### Installing
-To build the bot, you will need [install Go](https://go.dev/dl/).
+To build the bot, you will need to [install Go](https://go.dev/dl/).
 
-In order to properly use the bot, you're gonna have to include the sub-packages (otherwise all you'll have is the core package, which doesn't really do anything).
+In order to properly use the bot, you will need to include the sub-packages (otherwise all you'll have is the core package, which doesn't really do anything).
 We add modularization using [go tags](https://wawand.co/blog/posts/using-build-tags/). A list of available tags can be found in [TAGS.md](TAGS.md).
 
 To build the bot, you need to add the dependencies first:
@@ -52,4 +52,4 @@ For more information, see:
 > A: It's a personal bot, and [midnadimple](https://github.com/midnadimple) likes the Persona series.
 
 > Q: Why is it written in [the Go programming language](https://go.dev)?  
-> A: Speed is considerable important when it comes to AI.
+> A: Speed is considerably important when it comes to AI (a feature of the Poketwo module).
