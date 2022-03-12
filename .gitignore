@@ -1,6 +1,2 @@
-/docs/
-/lib/
-/bin/
-/.shards/
-*.dwarf
-persona
+cogs/__pycache__/
+data/config.json
