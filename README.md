@@ -4,20 +4,20 @@
 Persona is a modularized Discord userbot, created for those who need fast and customizable services in any Discord context.
 
 ## Installation
-To build the bot, you will first need to install [Crystal](https://crystal-lang.org/).
+To build the bot, you will first need to install [Python 3.8.*](https://www.python.org/).
 After you've done that, head over to the release page of this repository and download the latest release [here](https://github.com/rodofdiscord/persona/releases/latest).
 
 Then, `cd` into the downloaded folder (after extracting) and run:
 ```
-shards install
+python3 -m pip install discord.py-self
 ```
 
 Finally, run:
 ```
-crystal build src/persona.cr
+python3 launcher.py
 ```
 
-A new file called `persona` should have appeared in the folder. Run it as an application using `./persona` (or any other preferred method) and the bot should start normally.
+If everything has been setup correctly, the bot will run without issue, and display a `Logged into account <username>` message, where `username` is your Discord account's username.
 
 ## Contributing
 
@@ -25,7 +25,7 @@ A new file called `persona` should have appeared in the folder. Run it as an app
 2. Create your feature branch - `git checkout -b my-new-feature`
 3. Commit your changes - `git commit -am 'Add some feature'`
 4. Push to the branch - `git push origin my-new-feature`
-5. Create a new Pull Request
+5. Create a new Pull Request on GitHub
 
 ## Contributors
 
