@@ -1,55 +1,33 @@
-## Persona
+# Persona
+> Persona is in it's earliest stages of development, so we recommend that you check back in a few weeks or so. However, if you want to use it anyway, please note that documentation **is** incomplete and innaccurate, so for now, you're by yourself.
+
 Persona is a modularized Discord userbot, created for those who need fast and customizable services in any Discord context.
 
-### Installing
-To build the bot, you will need to [install Go](https://go.dev/dl/).
+## Installation
+To build the bot, you will first need to install [Crystal](https://crystal-lang.org/).
+After you've done that, head over to the release page of this repository and download the latest release [here](https://github.com/rodofdiscord/persona/releases/latest).
 
-In order to properly use the bot, you will need to include the sub-packages (otherwise all you'll have is the core package, which doesn't really do anything).
-We add modularization using [go tags](https://wawand.co/blog/posts/using-build-tags/). A list of available tags can be found in [TAGS.md](TAGS.md).
-
-To build the bot, you need to add the dependencies first:
-
+Then, `cd` into the downloaded folder (after extracting) and run:
 ```
-$ cd src/
-$ go get ./...
-```
-You also need to specify your [user token](https://pcstrike.com/how-to-get-discord-token/) in a file called `.env`. The file should look like similar to this:
-
-```
-TOKEN=a0EwYFeNeAQzFoYhZX8pmHB26aCZ4ZcV3eMrbw88yVchiGtTjkTZO5H0I3qKC6FlyhwXOidGTIf0zfDmgk8HMA==
+shards install
 ```
 
-Now, you can install the bot with a specified number of tags:
-
+Finally, run:
 ```
-$ go build -tags "<list of tags seperated by spaces>"
-$ go install .
+crystal build src/persona.cr
 ```
 
-To run it, type:
+A new file called `persona` should have appeared in the folder. Run it as an application using `./persona` (or any other preferred method) and the bot should start normally.
 
-```
-persona
-```
+## Contributing
 
-### Usage
+1. Fork it (<https://github.com/rodofdiscord/persona/fork>)
+2. Create your feature branch - `git checkout -b my-new-feature`
+3. Commit your changes - `git commit -am 'Add some feature'`
+4. Push to the branch - `git push origin my-new-feature`
+5. Create a new Pull Request
 
-Usage depends on the tags included. To run commands, you typically use the prefix, followed by the tagname, followed by the actual command.
+## Contributors
 
-e.g.
-```
-~general ping
-```
-
-For more information, see:
-
-```
-~help
-```
-
-### FAQ
-> Q: Why is it called persona?  
-> A: It's a personal bot, and [midnadimple](https://github.com/midnadimple) likes the Persona series.
-
-> Q: Why is it written in [the Go programming language](https://go.dev)?  
-> A: Speed is considerably important when it comes to AI (a feature of the Poketwo module).
+- [devraza](https://github.com/devraza) - Lead Programmer, Founder & Maintainer
+- [midnadimple](https://github.com/midnadimple) - Founder & Maintainer
