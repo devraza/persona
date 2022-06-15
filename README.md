@@ -9,12 +9,15 @@ After you've done that, head over to the release page of this repository and dow
 
 Then, `cd` into the downloaded folder (after extracting) and run:
 ```
-python3 -m pip install discord.py-self
+python3 -m pip install poetry
+poetry install
+cp data/config.json.sample data/config.json
+# then edit your user token and poketwo channel id
 ```
 
 Finally, run:
 ```
-python3 launcher.py
+poetry run python launcher.py
 ```
 
 If everything has been setup correctly, the bot will run without issue, and display a `Logged into account <username>` message, where `username` is your Discord account's username.
