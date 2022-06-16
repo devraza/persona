@@ -34,6 +34,7 @@ class Catching(Cog):
         for i in hint:
             hint_string += i
         hint_replaced = hint_string.replace('_', '.')
+        hint_replaced = hint_replaced.split(' ')[-1]
         solution = re.findall('^'+hint_replaced+'$', pokemon_list, re.MULTILINE)
         return solution
 
@@ -64,8 +65,10 @@ class Catching(Cog):
 
     @Cog.listener()
     async def on_message(self, message):
-        channel = self.bot.get_channel(int(catch_id))
-        if message.channel.id == int(catch_id):
+        channel_ids = [int(x) for x in catch_id.split(',')]
+        if message.channel.id in channel_ids:
+
+            channel = self.bot.get_channel(message.channel.id)
             if message.author.id == self.poketwo:
                 if message.embeds:
                     embed_title = message.embeds[0].title
@@ -81,11 +84,12 @@ class Catching(Cog):
                         else:
                             for i in self.solve(content):
                                 await channel.send(f'p!c {i.lower()}')
-                        check = random.randint(1, 240)
-                        if check == 1:
+                        checked = random.randint(1, 240)
+                        if checked == 1:
                             await asyncio.sleep(900)
 
                     elif 'Congratulations' in content:
+                        print(message.content)
                         self.cnum += 1
                         split = content.split(' ')
                         pokemon = split[7].replace('!', '')
